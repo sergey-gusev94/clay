@@ -1,0 +1,1464 @@
+nohup: ignoring input
++ module load gurobi/12.0
++ local __lmod_my_status
++ local __lmod_sh_dbg
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++ return 0
++ module load gams/49.1.0
++ local __lmod_my_status
++ local __lmod_sh_dbg
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++ return 0
++ export GRB_LICENSE_FILE=/local/scratch/a/sgusev/gurobi.lic
++ GRB_LICENSE_FILE=/local/scratch/a/sgusev/gurobi.lic
++ python clay.py
+Running all constrained layout problems
+Reformulation strategies: ['gdp.hull', 'gdp.bigm', 'gdp.hull_exact', 'gdp.binary_multiplication']
+Distance metrics: ['l1', 'l2']
+Solver configurations: 3
+  1. gams with gurobi
+  2. gams with baron
+  3. gams with scip
+Problems to solve: ['CLay0203', 'CLay0204', 'CLay0205', 'CLay0303', 'CLay0304', 'CLay0305']
+
+================================================================================
+Solving CLay0203 with l1 metric
+================================================================================
+
+Using solver: gams with gurobi
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpvk48fa_h
+
+    Optimal solution found: 41573.262525
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.92 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmppq8hxmcp
+
+    Optimal solution found: 41573.390398
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.48 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpl96tg_h3
+
+    Optimal solution found: 41573.272171
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.40 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp8_53u_ey
+
+    Optimal solution found: 41573.262603
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.43 seconds
+
+Using solver: gams with baron
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpxnsm0wew
+
+    Optimal solution found: 41573.262522
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.87 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpyd94kw7w
+
+    Optimal solution found: 41573.262522
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.71 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpo59hj3tq
+
+    Optimal solution found: 41573.262519
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 1.41 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp5jkx80tk
+
+    Optimal solution found: 41573.262504
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.86 seconds
+
+Using solver: gams with scip
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp45811r6s
+
+    Optimal solution found: 41573.262398
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 4.60 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpkiu8icor
+
+    Optimal solution found: 41573.262505
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.93 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpw6as5e2h
+
+    Optimal solution found: 41573.262398
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 1.19 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpydvtu4_1
+
+    Optimal solution found: 41573.262489
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.96 seconds
+
+================================================================================
+Solving CLay0203 with l2 metric
+================================================================================
+
+Using solver: gams with gurobi
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpzpy8_4d4
+
+    Optimal solution found: 31030.381452
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.61 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp6ls736rp
+
+    Optimal solution found: 31030.399485
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 2.11 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpr0ekwior
+
+WARNING: Loading a SolverResults object with a warning status into
+model.name="2-D constrained layout";
+    - termination condition: optimal
+    - message from solver: Solver quit with a problem (see LST file)
+    Optimal solution found: 31030.436070
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 23.14 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpj9s31w13
+
+    Optimal solution found: 31030.378424
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.45 seconds
+
+Using solver: gams with baron
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp6ovfve08
+
+    Optimal solution found: 31030.377221
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.82 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpv26esv8v
+
+    Optimal solution found: 31030.377221
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.62 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp0r62cll2
+
+    Optimal solution found: 31030.377221
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 2.70 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp400dspkb
+
+    Optimal solution found: 31030.377221
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 1.15 seconds
+
+Using solver: gams with scip
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmphc5lmdya
+
+    Optimal solution found: 31030.377107
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 17.43 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpzq1kmppj
+
+    Optimal solution found: 31030.377080
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 37.66 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpjbfd4s4u
+
+    Optimal solution found: 31030.377108
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 46.75 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp3ioi5i_5
+
+    Optimal solution found: 31030.377108
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 8.86 seconds
+
+================================================================================
+Solving CLay0204 with l1 metric
+================================================================================
+
+Using solver: gams with gurobi
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpuw9vf754
+
+    Optimal solution found: 6545.000000
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.79 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmppaxyxdxa
+
+    Optimal solution found: 6545.000000
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.33 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpfbvs0rs4
+
+    Optimal solution found: 6545.000000
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.45 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp3few69vv
+
+    Optimal solution found: 6545.000000
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.27 seconds
+
+Using solver: gams with baron
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpp4e0ep_q
+
+    Optimal solution found: 6545.000000
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.50 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpkahgxtbg
+
+    Optimal solution found: 6544.999623
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.60 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpn00v8hud
+
+    Optimal solution found: 6545.000000
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 1.67 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpluts9shp
+
+    Optimal solution found: 6545.000000
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.92 seconds
+
+Using solver: gams with scip
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmped5xvx53
+
+    Optimal solution found: 6545.000000
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 3.36 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpgcfeau5m
+
+    Optimal solution found: 6544.999912
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 1.81 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpfw4r15gt
+
+    Optimal solution found: 6544.999912
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 2.45 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp2rzt4z74
+
+    Optimal solution found: 6544.999914
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 1.91 seconds
+
+================================================================================
+Solving CLay0204 with l2 metric
+================================================================================
+
+Using solver: gams with gurobi
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmptla8a9x6
+
+    Optimal solution found: 5311.592965
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 5.63 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpwx35eukh
+
+    Optimal solution found: 5311.592971
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 8.31 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpvzkddc6j
+
+    Optimal solution found: 5311.593291
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 6.53 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpaqglxw3d
+
+    Optimal solution found: 5311.592966
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 7.22 seconds
+
+Using solver: gams with baron
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp1induxwz
+
+    Optimal solution found: 5311.592919
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 9.42 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpc21l4933
+
+    Optimal solution found: 5311.592919
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 4.67 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp5seu5l9q
+
+    Optimal solution found: 5311.592919
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 8.71 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpe0hgn1ac
+
+    Optimal solution found: 5311.592919
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 6.30 seconds
+
+Using solver: gams with scip
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpbh57ryd9
+
+    Optimal solution found: 5311.592852
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 3.75 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpzg8qby5r
+
+    Error solving with gams with scip and strategy gdp.bigm: Cannot load a SolverResults object with bad status: error
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpca32pn8w
+
+    Error solving with gams with scip and strategy gdp.hull_exact: Cannot load a SolverResults object with bad status: error
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpuum1dt4n
+
+    Optimal solution found: 5311.592972
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 3.25 seconds
+
+================================================================================
+Solving CLay0205 with l1 metric
+================================================================================
+
+Using solver: gams with gurobi
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp4_ymzfkg
+
+    Optimal solution found: 8092.500006
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 7.64 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmppjh1rq4i
+
+    Optimal solution found: 8092.500007
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 1.16 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp31o0ehhr
+
+    Optimal solution found: 8092.499996
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 2.91 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpbzmdli6i
+
+    Optimal solution found: 8092.500000
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 3.25 seconds
+
+Using solver: gams with baron
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpubjq9ch4
+
+    Optimal solution found: 8092.500000
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 12.41 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp1eo24rd0
+
+    Optimal solution found: 8092.499850
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 1.51 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp5enory4w
+
+    Optimal solution found: 8092.500000
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 15.09 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp7tvnvum2
+
+    Optimal solution found: 8092.500000
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 6.48 seconds
+
+Using solver: gams with scip
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp3o666y36
+
+    Optimal solution found: 8092.499917
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 17.99 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp9xidedm8
+
+    Optimal solution found: 8092.499901
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 14.16 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp_p0_25yi
+
+    Optimal solution found: 8092.500000
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 10.37 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp2f3z8cdi
+
+    Optimal solution found: 8092.499917
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 19.27 seconds
+
+================================================================================
+Solving CLay0205 with l2 metric
+================================================================================
+
+Using solver: gams with gurobi
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp9kw700xi
+
+    Optimal solution found: 6594.213484
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 125.12 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpxjoffcsv
+
+WARNING: Loading a SolverResults object with a warning status into
+model.name="2-D constrained layout";
+    - termination condition: optimal
+    - message from solver: Solver quit with a problem (see LST file)
+    Optimal solution found: 6594.235977
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 20.14 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpjwmhfx4l
+
+    Optimal solution found: 6594.213456
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 416.69 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpymp4gsnk
+
+    Optimal solution found: 6594.213484
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 35.89 seconds
+
+Using solver: gams with baron
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmplvagphh_
+
+    Optimal solution found: 6594.213484
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 40.40 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpn_r8uxu3
+
+    Optimal solution found: 6594.213484
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 47.95 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp6ydfxz6t
+
+    Optimal solution found: 6594.213476
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 128.98 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp3ch3ne9y
+
+    Optimal solution found: 6594.213484
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 39.43 seconds
+
+Using solver: gams with scip
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp08u34nq5
+
+    Optimal solution found: 6594.213402
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 164.14 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpu7y9yx3u
+
+    Optimal solution found: 6594.213402
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 14.65 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp_2hwcxeq
+
+    Optimal solution found: 6594.213402
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 23.01 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpxgx7hq7_
+
+    Optimal solution found: 6594.213484
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 21.17 seconds
+
+================================================================================
+Solving CLay0303 with l1 metric
+================================================================================
+
+Using solver: gams with gurobi
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpjqkwqdkb
+
+    Optimal solution found: 26669.109544
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.99 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpnphey54t
+
+    Optimal solution found: 26669.104576
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.46 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpbd65fdc0
+
+WARNING: Loading a SolverResults object with a warning status into
+model.name="2-D constrained layout";
+    - termination condition: optimal
+    - message from solver: Solver quit with a problem (see LST file)
+    Optimal solution found: 28351.405709
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 1.14 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp97c7yqzw
+
+    Optimal solution found: 26669.109557
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.45 seconds
+
+Using solver: gams with baron
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpqi6nypvw
+
+    Optimal solution found: 26669.109572
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 2.45 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp6uli_ifv
+
+    Optimal solution found: 26669.109681
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.64 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp8hm_nhly
+
+    Optimal solution found: 26669.109571
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 3.56 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpst6z1cc4
+
+    Optimal solution found: 26669.109562
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 4.25 seconds
+
+Using solver: gams with scip
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpjy1vj4qa
+
+    Optimal solution found: 26669.109865
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 5.57 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmplhcly6ku
+
+    Optimal solution found: 26669.109572
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 1.14 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp4y33hugf
+
+    Optimal solution found: 26669.109350
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 1.27 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpjjyaacvu
+
+    Optimal solution found: 26669.109572
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 1.11 seconds
+
+================================================================================
+Solving CLay0303 with l2 metric
+================================================================================
+
+Using solver: gams with gurobi
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpskq38_25
+
+    Optimal solution found: 19307.204570
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.79 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpf7b4f58o
+
+    Optimal solution found: 19307.158210
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 17.19 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpy85rdrkj
+
+WARNING: Loading a SolverResults object with a warning status into
+model.name="2-D constrained layout";
+    - termination condition: optimal
+    - message from solver: Solver quit with a problem (see LST file)
+    Optimal solution found: 19307.317023
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 116.53 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp3cb8o48c
+
+    Optimal solution found: 19307.152880
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.41 seconds
+
+Using solver: gams with baron
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpxdk57kcs
+
+    Optimal solution found: 19307.152880
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 5.44 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpru6m9pac
+
+    Optimal solution found: 19307.152880
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 1.35 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpmlny7zsb
+
+    Optimal solution found: 19307.152877
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 4.69 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpvnq6r7t5
+
+    Optimal solution found: 19307.152880
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 2.28 seconds
+
+Using solver: gams with scip
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp9k59o8yg
+
+    Optimal solution found: 22215.892967
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 13.20 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpbb4i6m1k
+
+    Optimal solution found: 19307.152733
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 2.11 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmphdew4upm
+
+    Optimal solution found: 19307.152715
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 4.75 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpz9b1_20e
+
+    Optimal solution found: 19307.152880
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 1.29 seconds
+
+================================================================================
+Solving CLay0304 with l1 metric
+================================================================================
+
+Using solver: gams with gurobi
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp591atk58
+
+    Optimal solution found: 40262.387454
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 1.79 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpntf1ea3h
+
+    Optimal solution found: 40262.387581
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.79 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpg569hqxt
+
+    Optimal solution found: 40262.374363
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 2.13 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmppsbyf5oc
+
+    Optimal solution found: 40262.387410
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.78 seconds
+
+Using solver: gams with baron
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmphdzl8gmu
+
+    Optimal solution found: 40790.968156
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 1808.30 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp2rg652gp
+
+    Optimal solution found: 40262.387531
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 0.70 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp47n0uwdt
+
+    Optimal solution found: 40262.387531
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 11.39 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpwzw5tb_d
+
+    Optimal solution found: 40262.387530
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 3.84 seconds
+
+Using solver: gams with scip
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpogs_obil
+
+    Optimal solution found: 40262.387258
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 9.59 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp5xahe2hm
+
+    Optimal solution found: 40262.387435
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 1.41 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp0g1g4ih8
+
+    Optimal solution found: 40262.387480
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 3.28 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp4tssb7oz
+
+    Optimal solution found: 40262.387530
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 2.84 seconds
+
+================================================================================
+Solving CLay0304 with l2 metric
+================================================================================
+
+Using solver: gams with gurobi
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpq8yl8gvm
+
+    Optimal solution found: 31494.901047
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 4.71 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp55osjbbl
+
+    Optimal solution found: 31494.912166
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 19.18 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpxc967ilc
+
+WARNING: Loading a SolverResults object with a warning status into
+model.name="2-D constrained layout";
+    - termination condition: optimal
+    - message from solver: Solver quit with a problem (see LST file)
+    Optimal solution found: 31495.006278
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 1132.60 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp5w3gwt5j
+
+    Optimal solution found: 31494.900494
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 5.17 seconds
+
+Using solver: gams with baron
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpi1aqnb80
+
+    Optimal solution found: 31494.900477
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 11.42 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpydu7_8cv
+
+    Optimal solution found: 31494.900473
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 3.36 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmprcl9xooy
+
+    Optimal solution found: 31494.900464
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 28.19 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpf7ny49do
+
+    Optimal solution found: 31494.900477
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 4.09 seconds
+
+Using solver: gams with scip
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpzgckz3xu
+
+    Optimal solution found: 31494.900249
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 31.30 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpuu3kto01
+
+    Error solving with gams with scip and strategy gdp.bigm: Cannot load a SolverResults object with bad status: error
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpfq7o8rmp
+
+    Optimal solution found: 31494.899836
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 1801.00 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp64bp6if6
+
+    Error solving with gams with scip and strategy gdp.binary_multiplication: Cannot load a SolverResults object with bad status: error
+
+================================================================================
+Solving CLay0305 with l1 metric
+================================================================================
+
+Using solver: gams with gurobi
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpxp19febo
+
+    Optimal solution found: 8092.500000
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 6.79 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpaq3m41_v
+
+    Optimal solution found: 8092.500000
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 2.16 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp0mvnecv2
+
+    Optimal solution found: 8092.500000
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 5.04 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpfw3hgkek
+
+    Optimal solution found: 8092.499992
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 1.62 seconds
+
+Using solver: gams with baron
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpmt2r2m4k
+
+    Optimal solution found: 8092.500000
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 6.56 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpuxocdxyz
+
+    Optimal solution found: 8092.500000
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 1.02 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpwydl7t3c
+
+    Optimal solution found: 8092.500000
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 19.24 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp6bzrhuxr
+
+    Optimal solution found: 8092.500000
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 10.21 seconds
+
+Using solver: gams with scip
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp20fcb_4d
+
+    Optimal solution found: 8092.500000
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 24.64 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpafg3en6w
+
+    Optimal solution found: 8092.500000
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 8.01 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp8oa5p1vy
+
+    Optimal solution found: 8092.500000
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 11.60 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp3fl4qrlu
+
+    Optimal solution found: 8092.500000
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 19.51 seconds
+
+================================================================================
+Solving CLay0305 with l2 metric
+================================================================================
+
+Using solver: gams with gurobi
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpa4mqp0o8
+
+    Optimal solution found: 6594.213441
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 218.42 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpjju_sezl
+
+    Optimal solution found: 6594.213484
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 42.85 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpa2omismn
+
+    Optimal solution found: 6594.215977
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 858.55 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpd67vq4nl
+
+    Optimal solution found: 6594.213484
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 78.53 seconds
+
+Using solver: gams with baron
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp72i9j9r5
+
+    Optimal solution found: 6594.213484
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 61.94 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp5yiq7hu2
+
+    Optimal solution found: 6594.213484
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 53.57 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp28jhb3xd
+
+    Optimal solution found: 6594.213484
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 72.13 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmp28h_6rpf
+
+    Optimal solution found: 6594.213484
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 78.77 seconds
+
+Using solver: gams with scip
+  Applying strategy: gdp.hull
+    Applying transformation: gdp.hull
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpnvt10t28
+
+    Optimal solution found: 41171.963236
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 21.79 seconds
+  Applying strategy: gdp.bigm
+    Applying transformation: gdp.bigm
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpo2mhgogw
+
+    Optimal solution found: 6594.213484
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 30.50 seconds
+  Applying strategy: gdp.hull_exact
+    Applying transformation: gdp.hull_exact
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpxf1x50t4
+
+    Optimal solution found: 6594.213402
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 20.73 seconds
+  Applying strategy: gdp.binary_multiplication
+    Applying transformation: gdp.binary_multiplication
+    Solving model...
+
+GAMS WORKING DIRECTORY: /tmp/tmpjktaokgw
+
+    Optimal solution found: 6594.213484
+Results appended to /local/scratch/a/sgusev/repos/clay/../data/clay_results.xlsx
+    Completed in 28.77 seconds
+
+All problems completed!

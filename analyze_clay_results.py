@@ -38,6 +38,8 @@ def create_performance_profile(
     time_limit: float = 1800,
     obj_tolerance: float = 1e-4,
     exclude_strategies: Optional[List[str]] = None,
+    include_strategies: Optional[List[str]] = None,
+    output_suffix: str = "",
 ) -> None:
     """
     Create performance profiles showing number of instances solved within a time limit.
@@ -56,6 +58,10 @@ def create_performance_profile(
         Relative error tolerance for determining if objective values are different, by default 1e-4
     exclude_strategies : List[str], optional
         List of strategies to exclude from plots, by default None
+    include_strategies : List[str], optional
+        List of strategies to include (if None, include all strategies), by default None
+    output_suffix : str, optional
+        Suffix to add to output filenames, by default ""
     """
     print(f"Creating performance profiles for {solver_combo}...")
 
@@ -111,10 +117,27 @@ def create_performance_profile(
 
     # Get unique strategies
     strategies = df["Strategy"].unique()
+    print(f"All unique strategies found in data: {list(strategies)}")
     
     # Filter strategies if exclude_strategies is provided
     if exclude_strategies is not None:
         strategies = [s for s in strategies if s not in exclude_strategies]
+
+    # Apply strategy filtering for include_strategies
+    if include_strategies is not None:
+        original_strategies = list(strategies)
+        strategies = [s for s in strategies if s in include_strategies]
+        print(f"Filtering to include only strategies: {include_strategies}")
+        print(f"Original strategies: {original_strategies}")
+        print(f"Available strategies after filtering: {list(strategies)}")
+
+        # If no strategies match the filter, warn and return early
+        if not strategies:
+            print(
+                "Warning: No strategies match the include_strategies filter. \
+                    Skipping profile generation."
+            )
+            return
 
     # Define consistent style and color mappings for the known reformulation strategies
     style_map = {
@@ -153,9 +176,9 @@ def create_performance_profile(
             x=time_limit, color="r", linestyle="--", alpha=0.7, label=f"Time limit {time_limit}s"
         )
 
-        plt.xlabel("Solution Time (seconds)", fontsize=32)
+        plt.xlabel("Solution Time (s)", fontsize=32)
         plt.ylabel("Number of Instances Solved", fontsize=32)
-        plt.title(f"Performance Profile: {_get_strategy_display_name(strategy)} ({solver_combo})", fontsize=34)
+        # plt.title(f"Performance Profile: {_get_strategy_display_name(strategy)} ({solver_combo})", fontsize=34)
 
         # Add grid
         plt.grid(True, alpha=0.3)
@@ -166,8 +189,12 @@ def create_performance_profile(
         # Add legend in bottom right corner
         plt.legend(loc="lower right", fontsize=24, framealpha=0.4)
 
+        # Adjust layout to prevent label cutoff
+        plt.tight_layout()
+
         # Save the figure
-        output_file = os.path.join(output_dir, f"profile_{strategy}_{solver_combo}.jpg")
+        strategy_suffix = f"_{output_suffix}" if output_suffix else ""
+        output_file = os.path.join(output_dir, f"profile_{strategy}_{solver_combo}{strategy_suffix}.jpg")
         plt.savefig(output_file, dpi=300, bbox_inches="tight")
         plt.close()
         print(f"  Saved to {output_file}")
@@ -205,9 +232,9 @@ def create_performance_profile(
         label=f"Time limit {time_limit}s",
     )
 
-    plt.xlabel("Solution Time (seconds)", fontsize=36)
-    plt.ylabel("Number of Instances Solved", fontsize=36)
-    plt.title(f"Performance Profiles ({solver_combo})", fontsize=38)
+    plt.xlabel("Solution Time (s)", fontsize=34)
+    plt.ylabel("Number of Instances Solved", fontsize=34)
+    # plt.title(f"Performance Profiles ({solver_combo})", fontsize=38)
 
     # Single legend for everything (upper left)
     plt.legend(loc="upper left", fontsize=19, framealpha=0.4)
@@ -218,8 +245,12 @@ def create_performance_profile(
     # Set x-axis to log scale
     plt.xscale("log")
 
+    # Adjust layout to prevent label cutoff
+    plt.tight_layout()
+
     # Save the figure
-    output_file = os.path.join(output_dir, f"profile_combined_{solver_combo}.jpg")
+    combined_suffix = f"_{output_suffix}" if output_suffix else ""
+    output_file = os.path.join(output_dir, f"profile_combined_{solver_combo}{combined_suffix}.jpg")
     plt.savefig(output_file, dpi=300, bbox_inches="tight")
     plt.close()
     print(f"Saved combined profile to {output_file}")
@@ -385,7 +416,7 @@ def create_outcome_analysis(
     plt.bar(x + width, counts_wrong, width, label="Wrong Solution", color="red")
     plt.xlabel("Strategy", fontsize=30)
     plt.ylabel("Count", fontsize=30)
-    plt.title(f"Solution Outcomes by Strategy ({solver_combo})", fontsize=32)
+    # plt.title(f"Solution Outcomes by Strategy ({solver_combo})", fontsize=32)
     display_names = [_get_strategy_display_name(s) for s in strategies]
     plt.xticks(x, display_names, rotation=0, fontsize=22)
     plt.yticks(fontsize=18)
@@ -515,12 +546,12 @@ def create_solution_time_comparison(
         )
 
     # Add labels and title
-    plt.xlabel(f"{display_name1} Solution Time (seconds)", fontsize=28)
-    plt.ylabel(f"{display_name2} Solution Time (seconds)", fontsize=28)
-    plt.title(f"Solution Time Comparison\n{display_name1} vs {display_name2} ({solver_combo})", fontsize=32)
+    plt.xlabel(f"{display_name1} Solution Time (s)", fontsize=28)
+    plt.ylabel(f"{display_name2} Solution Time (s)", fontsize=28)
+    # plt.title(f"Solution Time Comparison\n{display_name1} vs {display_name2} ({solver_combo})", fontsize=32)
 
     # Add legend
-    plt.legend(loc="lower right", fontsize=18, framealpha=0.4)
+    plt.legend(loc="upper left", fontsize=26, framealpha=0.4)
 
     # Add grid
     plt.grid(True, alpha=0.3)
@@ -539,7 +570,10 @@ def create_solution_time_comparison(
     plt.ylim(min_time, max_time)
 
     # Set tick parameters
-    plt.tick_params(axis="both", which="major", labelsize=20)
+    plt.tick_params(axis="both", which="major", labelsize=24)
+
+    # Adjust layout to prevent label cutoff
+    plt.tight_layout()
 
     # Save the figure
     output_file = os.path.join(output_dir, f"comparison_{strategy1}_vs_{strategy2}_{solver_combo}.jpg")
@@ -625,6 +659,20 @@ def main() -> None:
             solver_combo,
             time_limit=time_limit,
             exclude_strategies=["gdp.hull_reduced_y"]  # Exclude if it causes issues
+        )
+
+        # Generate performance profiles for specified reformulations only
+        print("\nGenerating performance profiles for specific reformulations...")
+        print(f"Available strategies in solver_df: {list(solver_df['Strategy'].unique())}")
+        specified_reformulations = ["gdp.hull_exact", "gdp.hull"]
+        print(f"Requested strategies: {specified_reformulations}")
+        create_performance_profile(
+            solver_df,
+            solver_dir,
+            solver_combo,
+            time_limit=time_limit,
+            include_strategies=specified_reformulations,
+            output_suffix="hull_exact_vs_hull",
         )
 
         # Create outcome analysis

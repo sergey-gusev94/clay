@@ -1,5 +1,5 @@
-Clay Results Analysis - Generated on: 2025-09-18 22:14:56
-Directory: /home/sergey-gusev/Desktop/research/projects/clay/data/plots/5
+Clay Results Analysis - Generated on: 2025-10-03 14:04:13
+Directory: /home/sgusev/repo/clay/data/plots/5
 
 Contains:
 1. Performance profiles for each solver-subsolver combination

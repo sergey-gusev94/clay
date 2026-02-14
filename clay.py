@@ -50,34 +50,62 @@ def solve_with_solver(
     Tuple[Any, float]
         Tuple containing (solver_result, duration)
     """
+    TOLS = {
+        "rel_gap": 1e-6,
+        "abs_gap": 1e-10,
+        "feas": 1e-6,
+        "opt": 1e-6,
+        "int": 1e-5,
+    }
+
     if solver.lower() == "gams":
         opt = pyo.SolverFactory("gams")
 
         # Set up options based on subsolver
         if subsolver and subsolver.lower() == "baron":
             # BARON options through GAMS
-            options_gams = ["$onecho > baron.opt", "$offecho", "GAMS_MODEL.optfile=1"]
+            options_gams = [
+                "$onecho > baron.opt",
+                "Threads 1",
+                f"EpsR {TOLS['rel_gap']}",
+                f"EpsA {TOLS['abs_gap']}",
+                f"AbsConFeasTol {TOLS['feas']}",
+                "RelConFeasTol 0",
+                f"AbsIntFeasTol {TOLS['int']}",
+                "RelIntFeasTol 0",
+                "$offecho",
+                "GAMS_MODEL.optfile=1;",
+            ]
             solver_name = "baron"
         elif subsolver and subsolver.lower() == "gurobi":
             # Gurobi with GAMS
             options_gams = [
                 "$onecho > gurobi.opt",
                 "NonConvex 2",
+                "Threads 1",
+                f"MIPGap {TOLS['rel_gap']}",
+                f"MIPGapAbs {TOLS['abs_gap']}",
+                f"FeasibilityTol {TOLS['feas']}",
+                f"OptimalityTol {TOLS['opt']}",
+                f"IntFeasTol {TOLS['int']}",
                 "$offecho",
-                "GAMS_MODEL.optfile=1",
+                "GAMS_MODEL.optfile=1;",
             ]
             solver_name = "gurobi"
         elif subsolver and subsolver.lower() == "scip":
             # SCIP through GAMS
             options_gams = [
                 "$onecho > scip.opt",
-                "limits/time = " + str(time_limit),
-                "numerics/feastol = 1e-6",
-                "numerics/epsilon = 1e-6",
-                "numerics/sumepsilon = 1e-6",
+                f"limits/time = {time_limit}",
+                "parallel/maxnthreads = 1",
+                f"limits/gap = {TOLS['rel_gap']}",
+                f"limits/absgap = {TOLS['abs_gap']}",
+                f"numerics/feastol = {TOLS['feas']}",
+                f"numerics/dualfeastol = {TOLS['opt']}",
+                f"numerics/sumepsilon = {TOLS['feas']}",
                 "display/verblevel = 4",
                 "$offecho",
-                "GAMS_MODEL.optfile=1",
+                "GAMS_MODEL.optfile=1;",
             ]
             solver_name = "scip"
         else:
@@ -93,8 +121,8 @@ def solve_with_solver(
             add_options=[
                 f"option reslim={time_limit};",
                 "option threads=1;",
-                "option optcr=1e-6;",
-                "option optca=0;",
+                f"option optcr={TOLS['rel_gap']};",
+                f"option optca={TOLS['abs_gap']};",
                 *options_gams,
             ],
         )

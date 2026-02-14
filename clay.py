@@ -496,7 +496,7 @@ if __name__ == "__main__":
     run_all_problems(
         reformulation_strategies=reformulation_strategies,
         solver_configs=solver_configs,
-        time_limit=1800,  
+        time_limit=300,  
         metrics=[
             "l1",
             "l2"],

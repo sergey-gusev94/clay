@@ -10,7 +10,16 @@ from pyomo.environ import ConcreteModel, SolverFactory, TransformationFactory, v
 
 # Import GDP plugins to make them available
 import pyomo.gdp.plugins.hull_exact
+import pyomo.gdp.plugins.hull_exact_conic
+import pyomo.gdp.plugins.hull_exact_conic_no_sqrt_extra_var
+import pyomo.gdp.plugins.hull_exact_conic_no_sqrt_no_extra_var
+import pyomo.gdp.plugins.hull_exact_conic_original
+import pyomo.gdp.plugins.hull_exact_conic_sqrt_extra_var
+import pyomo.gdp.plugins.hull_exact_conic_sqrt_no_extra_var
+import pyomo.gdp.plugins.hull_exact_conic_no_cholesky
 import pyomo.gdp.plugins.hull_reduced_y
+import pyomo.gdp.plugins.hull_exact_extra_var
+import pyomo.gdp.plugins.hull_exact_extra_var_inequal
 
 # Add the path to import the constrained layout model
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'pyomo', 'examples', 'gdp', 'constrained_layout'))
@@ -484,6 +493,8 @@ if __name__ == "__main__":
         "gdp.bigm", 
         "gdp.hull_exact",
         "gdp.binary_multiplication",
+        "gdp.hull_exact_conic_no_cholesky",
+
     ]
     
     solver_configs = [

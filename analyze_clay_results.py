@@ -14,6 +14,7 @@ import os
 from datetime import datetime
 from typing import Dict, List, Optional
 
+import matplotlib.colors as mcolors
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -52,15 +53,65 @@ def _get_strategy_style_maps() -> tuple:
         "gdp.hull_exact": "-.",
         "gdp.hull_reduced_y": ":",
         "gdp.binary_multiplication": (0, (5, 1)),
+        "gdp.hull_exact_extra_var_inequal": (0, (10, 5)),  # long dashes
+        "gdp.hull_exact_conic_no_cholesky": (0, (3, 1, 1, 1)),  # dash-dot-dot
     }
     color_map = {
         "gdp.bigm": "blue",
         "gdp.hull": "brown",
         "gdp.hull_exact": "green",
         "gdp.hull_reduced_y": "purple",
-        "gdp.binary_multiplication": "orange",
+        "gdp.binary_multiplication": "teal",
+        "gdp.hull_exact_extra_var_inequal": "darkgreen",
+        "gdp.hull_exact_conic_no_cholesky": "orange",
     }
+
+    # Add convex_flag_ variants: same line styles, distinctly different colors
+    convex_color_map = {
+        "gdp.convex_flag_bigm": "crimson",
+        "gdp.convex_flag_hull": "magenta",
+        "gdp.convex_flag_hull_exact": "darkorange",
+        "gdp.convex_flag_hull_reduced_y": "olive",
+        "gdp.convex_flag_binary_multiplication": "navy",
+        "gdp.convex_flag_hull_exact_extra_var_inequal": "tomato",
+        "gdp.convex_flag_hull_exact_conic_no_cholesky": "deeppink",
+    }
+    for convex_key, base_key in [
+        ("gdp.convex_flag_bigm", "gdp.bigm"),
+        ("gdp.convex_flag_hull", "gdp.hull"),
+        ("gdp.convex_flag_hull_exact", "gdp.hull_exact"),
+        ("gdp.convex_flag_hull_reduced_y", "gdp.hull_reduced_y"),
+        ("gdp.convex_flag_binary_multiplication", "gdp.binary_multiplication"),
+        ("gdp.convex_flag_hull_exact_extra_var_inequal", "gdp.hull_exact_extra_var_inequal"),
+        ("gdp.convex_flag_hull_exact_conic_no_cholesky", "gdp.hull_exact_conic_no_cholesky"),
+    ]:
+        style_map[convex_key] = style_map[base_key]
+    color_map.update(convex_color_map)
+
     return style_map, color_map
+
+
+def _get_strategy_color(strategy: str, base_color_map: dict) -> any:
+    """Return a consistent color for a strategy.
+
+    - Uses `base_color_map` when available.
+    - Otherwise assigns a deterministic color from a large palette (tab20),
+      avoiding collisions with colors already used in `base_color_map`.
+    """
+    if strategy in base_color_map:
+        return base_color_map[strategy]
+
+    # Build a palette and remove colors already used
+    tab20 = [plt.get_cmap("tab20")(i) for i in range(20)]
+    used_colors = set(mcolors.to_rgba(c) for c in base_color_map.values())
+    available = [c for c in tab20 if mcolors.to_rgba(c) not in used_colors]
+    # Fallback in the unlikely case all tab20 colors are used
+    if not available:
+        available = tab20
+
+    # Deterministic assignment based on strategy string
+    index = abs(hash(strategy)) % len(available)
+    return available[index]
 
 
 def _is_solution_correct(
@@ -225,7 +276,7 @@ def create_dolan_more_performance_profile(
         y_values = np.arange(1, n_problems + 1) / n_problems
         
         style = style_map.get(strategy, "-")
-        color = color_map.get(strategy, "black")
+        color = _get_strategy_color(strategy, color_map)
         display_name = _get_strategy_display_name(strategy)
         
         plt.step(ratios, y_values, where="post", linewidth=6, 
@@ -414,7 +465,7 @@ def create_performance_profile(
         y = np.arange(1, len(x) + 1)
 
         style = style_map.get(strategy, "-")
-        color = color_map.get(strategy, "black")
+        color = _get_strategy_color(strategy, color_map)
 
         display_name = _get_strategy_display_name(strategy)
 
@@ -792,8 +843,8 @@ def main() -> None:
     results_file = os.path.join(data_dir, "clay_results.xlsx")
     plots_base_dir = os.path.join(data_dir, "plots")
 
-    # Define time limit in seconds (30 minutes)
-    time_limit = 1800
+    # Define time limit in seconds (5 minutes)
+    time_limit = 300
 
     # Create plots base directory if it doesn't exist
     os.makedirs(plots_base_dir, exist_ok=True)

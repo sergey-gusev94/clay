@@ -11,6 +11,7 @@ Author: Generated for constrained layout problem analysis
 """
 
 import os
+import re
 from datetime import datetime
 from typing import Dict, List, Optional
 
@@ -22,14 +23,33 @@ import pandas as pd
 
 def _get_strategy_display_name(strategy: str) -> str:
     """Gets a display-friendly name for a strategy."""
-    display_name = strategy.replace("gdp.", "")
-    # Longer names must be replaced first to avoid partial replacements
-    display_name = display_name.replace("hull_exact", "Hull Exact")
+    convex_prefix = ""
+    bare = strategy.replace("gdp.", "")
+    if bare.startswith("convex_flag_"):
+        convex_prefix = "Convex Flag "
+        bare = bare[len("convex_flag_"):]
+
+    display_name = bare
+
+    # Handle hull_eps_<value> patterns: hull_eps_1e-3 → Hull(ε=1e-3)
+    eps_match = re.match(r"hull_eps_(.*)", display_name)
+    if eps_match:
+        return convex_prefix + f"Hull(ε={eps_match.group(1)})"
+
+    display_name = display_name.replace("hull_exact_extra_var_inequal", "General Exact Hull Extra Var Ineq.")
+    display_name = display_name.replace("hull_exact_conic_no_sqrt_extra_var", "Conic Exact Hull (No Sqrt, Extra Var)")
+    display_name = display_name.replace("hull_exact_conic_no_sqrt_no_extra_var", "Conic Exact Hull (No Sqrt, No Extra Var)")
+    display_name = display_name.replace("hull_exact_conic_sqrt_extra_var", "Conic Exact Hull (Sqrt, Extra Var)")
+    display_name = display_name.replace("hull_exact_conic_sqrt_no_extra_var", "Conic Exact Hull (Sqrt, No Extra Var)")
+    display_name = display_name.replace("hull_exact_conic_original", "Conic Exact Hull (Only factorized)")
+    display_name = display_name.replace("hull_exact_conic_no_cholesky", "Conic Exact Hull")
+    display_name = display_name.replace("hull_exact_conic", "Conic Exact Hull (Base)")
+    display_name = display_name.replace("hull_exact", "General Exact Hull")
     display_name = display_name.replace("hull_reduced_y", "Hull Reduced Y")
     display_name = display_name.replace("binary_multiplication", "Binary Mult.")
-    display_name = display_name.replace("hull", "Hull(ε-approx.)")
+    display_name = display_name.replace("hull", "Hull ε-approx. (ε=1e-4)")
     display_name = display_name.replace("bigm", "BigM")
-    return display_name
+    return convex_prefix + display_name
 
 
 def _filter_strategies(
